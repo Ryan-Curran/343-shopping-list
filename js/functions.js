@@ -12,7 +12,11 @@ function outputCartRow(item, total) {
             <td>${title}</td>
             <td>${quantity}</td>
             <td>${price}</td>
-            <td>${total}</td>
+            <td>${calculateTotal(quantity, price)}</td>
         </tr>`;
   document.write(row);
+}
+
+function calculateTotal(quantity, price) {
+  return quantity * price;
 }
